@@ -158,6 +158,10 @@ textarea{
   font-weight: 700;
   letter-spacing: 3px;
 }
+img.img-fluid.logo-mobile {
+    position: relative;
+    top: 30px;
+}
 
 #header .logo a {
   color: #fff;
