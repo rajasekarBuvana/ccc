@@ -172,6 +172,10 @@ img.img-fluid.logo-mobile {
     position: relative;
     top: -40px;
   }
+	img.img-fluid.logo-mobile {
+    position: relative;
+    top: 30px;
+}
 }
 
 /*--------------------------------------------------------------
