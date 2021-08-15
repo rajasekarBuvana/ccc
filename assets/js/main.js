@@ -31,6 +31,27 @@
     return false;
   });
 
+
+  // siemens start
+  $(document).ready(function() {
+    $('#autoWidth').lightSlider({
+        autoWidth:true,
+        loop:true,
+        onSliderLoad: function() {
+            $('#autoWidth').removeClass('cS-hidden');
+        } 
+    });  
+  });
+  // Allen slider 
+  $(document).ready(function() {
+    $('#allen-bradly').lightSlider({
+        autoWidth:true,
+        loop:true,
+        onSliderLoad: function() {
+            $('#allen-bradly').removeClass('cS-hidden');
+        } 
+    });  
+  });
   // Smooth scroll for the navigation menu and links with .scrollto classes
   var scrolltoOffset = $('#header').outerHeight() - 17;
   $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function(e) {
