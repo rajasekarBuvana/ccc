@@ -29,6 +29,8 @@ a:hover, a:active, a:focus {
 p {
   padding: 0;
   margin: 0 0 30px 0;
+  text-align: justify;
+    line-height: 30px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -52,6 +54,15 @@ h3.sec-title {
   font-size: 32px;
   color: #000;
   font-weight: 600;
+}
+li{
+  list-style: none;
+}
+.mt-10{
+  margin-top: 10px !important;
+}
+textarea {
+  resize: none !important;
 }
 /*-- End--*/
 /* Back to top button */
@@ -733,6 +744,10 @@ section {
   margin-bottom: 0;
   padding: 0 20px 20px 20px;
 }
+p.about-desc {
+  line-height: 35px;
+  margin-top: 20px;
+}
 
 /*--- About features start --*/
 p.fst-italic {
@@ -753,9 +768,70 @@ p.fst-italic {
   font-size:13px;
   line-height: 24px;
 }
+.features .icon-box {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: #f5f5ff;
+  transition: ease-in-out 0.3s;
+}
+.features .icon-box h3 {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-size: 16px;
+}
+.features .icon-box h3 a {
+  color: #010483;
+  transition: ease-in-out 0.3s;
+}
 /*-- About end--*/
 
-
+/*---Services start---*/
+.details .content ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: #1acc8d;
+}
+h3.black-title {
+  color: #000;
+  font-weight: 600;
+  /* font-size: 24px; */
+}
+/*---End ---*/
+/*--- Industry start---*/
+.bann_container {
+  position: relative;
+}
+.bann_container img {
+  width: 100%;
+}
+ .elementor-column-wrap{
+  background-color: #FFFFFF;
+  background-image: url(https://callgtc.com/wp-content/uploads/2020/06/bg-table.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 50px auto;
+}
+.elementor-widget-wrap {
+  position: relative;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+}
+.elementor-widget-wrap>.elementor-element {
+  width: 100%;
+}
+.elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:last-child) {
+  padding-bottom: calc(10px/2);
+}
+.elementor-icon-list-text {
+  padding-left: 10px;
+}
+/*--- Industry end---*/
 /*--- Our vision ---*/
 .bg-cover{
   background-image: url('../img/dan-schiumarini-dcL8ESbsGis-unsplash.jpg');
@@ -1084,6 +1160,38 @@ display: flex;
 .contact-form .second-container form .btn:hover{
   background:#333;
 }
+.contact .info {
+  padding: 20px 40px;
+  background: #f1f3f6;
+  color: #47536e;
+  text-align: center;
+  border: 1px solid #fff;
+}
+.contact .info i {
+  font-size: 48px;
+  color: #9fb2d8;
+  margin-bottom: 15px;
+}
+.contact .info h4 {
+  padding: 0;
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+}
+.contact .info p {
+  font-size: 15px;
+}
+.contact .php-email-form button[type="submit"] {
+  background: #fff;
+  border: 2px solid #5777ba;
+  padding: 10px 24px;
+  color: #5777ba;
+  transition: 0.4s;
+  border-radius: 50px;
+  margin-top: 5px;
+}
 @media screen and (max-width:800px){
   .contact-form{
     width:90vw;
@@ -1124,6 +1232,9 @@ display: flex;
 #career {
   padding: 30px;
 }
+.pd-top-120 {
+  padding-top: 120px;
+}
 .section-title .title {
   letter-spacing: 0.92px;
   color: #01358D;
@@ -1143,13 +1254,124 @@ display: flex;
   box-shadow: 0px 10px 14px #24f5354f;
   color: #fff;
 }
-
-p {
-  color:#5b6880;
-  -webkit-hyphens: auto;
-  hyphens: auto;
-  margin-bottom: 10px;
+.section-title {
+  margin-bottom: 65px;
+}
+.single-accordion {
+  border: 1px solid #F5F9FF;
+  border-radius: 3px;
+  margin-bottom: 14px;
+}
+.single-accordion .card-header {
+  background: transparent; 
+  border-radius: 0;
+  border: 0;
+  padding: 0;
+}
+.single-job-list {
+  background: #fff;
+  box-shadow: 0px 4px 20px #9398a11a;
+  border-radius: 8px;
+  padding: 22px 35px 22px 26px;
+  transition: all 0.3s ease;
+  margin-bottom: 40px;
+  align-items: center;
+}
+.single-accordion .card-body {
+  padding: 21px 71px 23px 37px;
+  font-size: var(--body-font-size);
   line-height: 30px;
+  letter-spacing: 0.3px;
+  color: #97A1B3;
+}
+.single-job-list img {
+  width: 66px;
+  height: 66px;
+}
+.single-job-list .media-body {
+  border-left: 1px solid #EEEBF7;
+  margin-left: 26.5px;
+  padding-left: 25.5px;
+}
+.job-apply-btn {
+  background: #FFFFFF;
+  border: 1px solid #D6DAE1;
+  border-radius: 4px;
+  font-size: var(--body-font-size);
+  letter-spacing: 0.3px;
+  color: #97A1B3;
+  height: 44px;
+  line-height: 44px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 0 30px;
+  display: inline-block;
+}
+.widget-job-details .single-job-details {
+  margin-bottom: 25px;
+}
+.widget-job-details {
+  background: #fff;
+  box-shadow: 0px 2px 50px #97a1b229;
+  border-radius: 8px;
+  padding: 70px 38px;
+}
+.widget-job-details .widget-title {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  padding-bottom: 15px;
+  margin-bottom: 32px;
+}
+.widget-job-details .single-job-details img {
+  margin-top: 2px;
+}
+.widget-job-details .single-job-details .media-body {
+  margin-left: 25.25px;
+}
+.ccc-file-input-wrap {
+  margin-top: 10px;
+  height: 100%;
+}
+.ccc-file-input-wrap label {
+  cursor: pointer;
+  border: 0;
+  color: #fff;
+  border-radius: 0;
+  background: #32E2A9;
+  height: 62px;
+  line-height: 64px;
+  text-align: center;
+  padding: 0;
+  cursor: cell;
+}
+.ccc-file-input-wrap .ccc-file-input {
+  cursor: pointer;
+  height: 60px;
+  line-height: 60px;
+  width: 100%;
+}
+.custom-file {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: calc(1.5em + .75rem + 2px);
+  margin-bottom: 0;
+}
+.custom-file-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
 }
 /*---- End------*/
 /*--------------------------------------------------------------
