@@ -55,9 +55,48 @@ h3.sec-title {
   color: #000;
   font-weight: 600;
 }
-li{
-  list-style: none;
+
+/*--- Terms start ---*/
+.live {
+  overflow: hidden;
 }
+.live > li {
+  list-style: circle;
+  position: relative;
+  padding: 0 0 0 2em;
+  margin: 0 0 0.5em 10px;
+  transition: 0.12s;
+  line-height: 30px;
+}
+.live > li::before {
+  position: absolute;
+  content: "•";
+  color: #FFF;
+  top: 0;
+  left: 0;
+  text-align: center;
+  font-size: 2em;
+  opacity: 0.5;
+  line-height: 0.75;
+  transition: 0.5s;
+}
+.live > li:hover {
+  color: #595959;
+}
+.live > li:hover::before {
+  transform: scale(2);
+  opacity: 1;
+  text-shadow: 0 0 4px;
+  transition: 0.1s;
+}
+.d-title{
+  font-size: 22px;
+    text-align: center;
+    font-weight: 600;
+    color: #18d26e;
+    text-transform: uppercase;
+}
+/*--- Terms end ---*/
 .mt-10{
   margin-top: 10px !important;
 }
@@ -147,7 +186,7 @@ textarea {
 #header {
   transition: all 0.5s;
   z-index: 997;
-  padding: 26px 0;
+  padding: 20px 0;
   background: rgba(0, 0, 0, 0.9);
 }
 
@@ -160,25 +199,18 @@ textarea {
   padding: 18px 0;
 }
 
-#header .logo {
-  font-size: 34px;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  letter-spacing: 3px;
-}
-
 #header .logo a {
   color: #000000;
 }
 
 @media (max-width: 992px) {
-.logo,.mobile {
-    position: relative;
-    top: -40px;
+  img.img-fluid.logo-mobile {
+    padding: 10px;
   }
+  #header {
+    background: rgb(203 195 195 / 90%)!important;
+    padding: 10px;
+}
 }
 
 /*--------------------------------------------------------------
@@ -206,8 +238,7 @@ textarea {
   position: relative;
   color: #000000;
   transition: 0.3s;
-  font-size: 12px;
-  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -309,7 +340,7 @@ textarea {
 }
 
 .mobile-nav-toggle i {
-  color: #fff;
+  color: #000000;
 }
 
 .mobile-nav {
@@ -614,7 +645,7 @@ section {
 }
 
 .breadcrumbs h2 {
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 0;
   font-weight: 400;
 }
@@ -1149,7 +1180,7 @@ display: flex;
 .section-title .title span {
   color:#00ad5f;
   position: relative;
-    left: 10px;
+  left: 10px;
 }
 .btn-green{
   background: #00ad5f;
@@ -1290,6 +1321,8 @@ a.btn-get.bg-green.rounded-8.c-white.h-fit-content {
   outline: none;
 }
 /*---- End------*/
+
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
