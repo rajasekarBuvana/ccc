@@ -1360,6 +1360,16 @@ a.btn-get.bg-green.rounded-8.c-white.h-fit-content {
   border: none;
   outline: none;
 }
+.custom-file-label::after {
+  color:var(--white-color) !important;
+  content: "Browse";
+  background-color:var(--green-color)!important;
+}
+.btn-submit{
+  background-color:var(--green-color);
+  border:none;
+  color:var(--white-color)!important;
+}
 /*---- End------*/
 
 
