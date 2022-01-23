@@ -31,7 +31,40 @@
     return false;
   });
 
-
+  // Events One Carousel
+  if ($(".events-one__carousel").length) {
+    $(".events-one__carousel").owlCarousel({
+      loop: true,
+      margin: 15,
+      nav: true,
+      smartSpeed: 500,
+      autoHeight: false,
+      autoplay: true,
+      dots: false,
+      autoplayTimeout: 10000,
+      navText: [
+        '<span class="fas fa-long-arrow-alt-right"></span>',
+        '<span class="fas fa-long-arrow-alt-right"></span>',
+      ],
+      responsive: {
+        0: {
+          items: 1,
+        },
+        600: {
+          items: 1,
+        },
+        800: {
+          items: 2,
+        },
+        1024: {
+          items: 3,
+        },
+        1200: {
+          items:5,
+        },
+      },
+    });
+  }
   // siemens start
   $(document).ready(function() {
     $('#autoWidth').lightSlider({
@@ -183,40 +216,11 @@
     $(this).find('p, .btn-get-started').addClass('animate__animated animate__fadeInUp');
   });
 
-  // Skills section
-  $('#skills').waypoint(function() {
-    $('.progress .progress-bar').each(function() {
-      $(this).css("width", $(this).attr("aria-valuenow") + '%');
-    });
-  }, {
-    offset: '80%'
-  });
 
   // jQuery counterUp (used in Facts section)
   $('[data-toggle="counter-up"]').counterUp({
     delay: 10,
     time: 1000
-  });
-
-  // Porfolio isotope and filter
-  var portfolioIsotope = $('.portfolio-container').isotope({
-    itemSelector: '.portfolio-item',
-    layoutMode: 'fitRows'
-  });
-
-  $('#portfolio-flters li').on('click', function() {
-    $("#portfolio-flters li").removeClass('filter-active');
-    $(this).addClass('filter-active');
-
-    portfolioIsotope.isotope({
-      filter: $(this).data('filter')
-    });
-    aos_init();
-  });
-
-  // Initiate venobox (lightbox feature used in portofilo)
-  $(document).ready(function() {
-    $('.venobox').venobox();
   });
 
   /**
