@@ -47,7 +47,17 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px 0;
   padding: 0;
 }
-
+.font-20{
+  font-size: 20px;
+  color: var(--black-color);
+  font-weight: 500;
+}
+.pr-1{
+  padding-right: 10px !important;
+}
+.pt-5{
+  padding-top: 50px !important;
+}
 /*-- General css ---*/
 .section-bg {
   background-color:var(--bg-color);
@@ -260,6 +270,9 @@ section#intro {
   font-size: 13px;
   text-transform: uppercase;
   font-weight: 600;
+}
+ul.nav-menu>li>a.active {
+  color: #03c03c!important;
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
@@ -502,12 +515,22 @@ section#intro {
 }
 
 #intro h2 {
-  color: #fff;
+  background: -webkit-linear-gradient(#05da63, #0ddf0a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #e5989800;
   margin-bottom: 30px;
   font-size: 48px;
   font-weight: 700;
+  animation-name:glow;
+  animation-duration:1s;
+  animation-iteration-count:infinite;
+  animation-direction:alternate;
 }
 
+@keyframes glow{
+  from{text-shadow:0px 0px 1px #03c03c,0px 0px 1px #18d26e;}
+  to{text-shadow:0px 0px 10px #03c03c,0px 0px 20px #18d26e;}
+}
 @media (max-width: 768px) {
   #intro h2 {
     font-size: 28px;
@@ -660,7 +683,7 @@ section {
 
 @media (max-width: 992px) {
   .breadcrumbs {
-    margin-top: 115px;
+    margin-top: 80px;
   }
   .section-title .title {
     font-size: 20px;
