@@ -515,7 +515,7 @@ ul.nav-menu>li>a.active {
 }
 
 #intro h2 {
-  background: -webkit-linear-gradient(#05da63, #0ddf0a);
+  background: -webkit-linear-gradient(#05da63, #38f9d7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: #e5989800;
   margin-bottom: 30px;
@@ -527,15 +527,15 @@ ul.nav-menu>li>a.active {
   animation-direction:alternate;
 }
 
-@keyframes glow{
-  from{text-shadow:0px 0px 1px #03c03c,0px 0px 1px #18d26e;}
-  to{text-shadow:0px 0px 10px #03c03c,0px 0px 20px #18d26e;}
+/* @keyframes glow{
+  from{text-shadow:0px 0px 1px #d4fc79,0px 0px 1px #96e6a1;}
+  to{text-shadow:0px 0px 10px #03c03c,0px 0px 10px #18d26e;}
 }
 @media (max-width: 768px) {
   #intro h2 {
     font-size: 28px;
   }
-}
+} */
 
 #intro p {
   width: 80%;
